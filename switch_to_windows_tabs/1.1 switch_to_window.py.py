@@ -22,10 +22,18 @@ class SwitchToWindow():
         # Switch to window and search course
         for handle in handels:
             print(handle)
+            if handle not in parentHandel:
+                driver.switch_to_window(handle)
+                searchIlement = driver.find_element_by_id("search-courses").send_keys("pythoon")
+                time.sleep(2)
+                driver.close()
+                break
+
         # Switch back and to parent handle
+        #driver.switch_to_window(parentHandel)
+        driver.find_element_by_id("name").send_keys("test is pass")
 
 
-       # serch = driver.find_element_by_id("search-courses").send_keys("yyyy")
 
 ff = SwitchToWindow()
 ff.test()
