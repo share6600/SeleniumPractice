@@ -12,10 +12,11 @@ class SwitchToFrame():
         driver.execute_script("window.scrollBy(0, 1000);")
 
         # Switch to frame using Id
-        driver.switch_to_frame("iframe-name")
+        
         # Switch to frame using name
 
         # Switch to frame using numbers
+        driver.switch_to_frame(0)
         time.sleep(2)
         # Search course
         searchBox = driver.find_element(By.ID, "search-courses")
